@@ -1,0 +1,19 @@
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+    items:1,
+    loop:true,
+    dots:true,
+    nav:false,
+    dots:true,
+    margin:10,
+    smartSpeed:1000,
+    autoplay:true,
+    autoplayTimeout:4000,
+    autoplayHoverPause:true
+});
+$('.play').on('click',function(){
+    owl.trigger('play.owl.autoplay',[1000])
+})
+$('.stop').on('click',function(){
+    owl.trigger('stop.owl.autoplay')
+})
